@@ -34,7 +34,7 @@ const Tasklist = () => {
     const updatedTasks = [...tasks];
     updatedTasks[index] = updatedTask;
     setTasks(updatedTasks);
-    setEditingTask(null)
+    // setEditingTask(null)
    
   };
 
@@ -62,8 +62,8 @@ const Tasklist = () => {
             {editingTask === index ? (
               <>
                 <TextField
-                 defaultValue={task} 
-                  onSubmit={(value) => updateTask(index, value)}
+                 value={task} 
+                  onChange={(e) => updateTask(index, e.target.value)}
                   fullWidth
                 />
                 <IconButton onClick={() => updateTasks(index, task)}>
