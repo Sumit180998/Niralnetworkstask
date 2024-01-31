@@ -1,27 +1,54 @@
+
+
 .App{
     display: flex;
-    max-width: 100%;
-    max-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+   
     background-color: rgb(56, 56, 118);
     justify-content: center;
 }
 
-.butt {
-    padding : 5px 10px;
-    font-size: 20px;
-    border-color: blue;
-    margin: 5px;
-    border-radius: 10%;
+.butt{
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  /* border: 2px solid $red; */
+  border-radius: 0.6em;
+  /* color: $red; */
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
     color: #fff;
-    box-shadow: 0 0 40px 40px blue inset, 0 0 0 0 blue;
-    transition: all 150ms ease-in-out;
-    
-    &:hover {
-      color: black;
-      background-color: antiquewhite;
-    }
+    outline: 0;
   }
+}
+
+.butt {
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  }
+}
   .tasklist{
     display: flex;
     flex-direction: column;
+    margin-top: 10%;
   }
